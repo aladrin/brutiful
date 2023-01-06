@@ -1,0 +1,3 @@
+#!/bin/ksh
+LINE=$(</dev/stdin)
+eval $(< /etc/brutiful.d/grep/$1)

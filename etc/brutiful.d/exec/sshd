@@ -1,0 +1,2 @@
+LINE=${LINE%%port*}
+BRUTE=$(echo $LINE | awk '{print $10}')

@@ -1,0 +1,1 @@
+echo $LINE | egrep -q 'no matching key exchange method found|Invalid user|Disconnected from authenticating user'

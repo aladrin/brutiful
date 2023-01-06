@@ -1,0 +1,1 @@
+BRUTE=$(echo $LINE|awk -F'user=<>, rip=' '{print $2}'|cut -d, -f1)

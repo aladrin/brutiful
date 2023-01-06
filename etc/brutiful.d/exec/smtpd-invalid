@@ -1,0 +1,1 @@
+BRUTE=$(echo $P1|awk -F'address=' '{print $2}'|cut -d" " -f1)

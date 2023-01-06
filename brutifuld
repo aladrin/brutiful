@@ -1,0 +1,11 @@
+#!/bin/ksh
+EXECPATH=/root/bin
+tail -f $(< /etc/brutiful.d/log/$1) | while read LINE
+do
+  echo $LINE | $EXECPATH/brutiful-grep $1 && {
+    $EXECPATH/brutiful-exec $1 "$LINE" "$P1" "$P2" "$P3"
+  }
+  P3="$P2"
+  P2="$P1"
+  P1="$LINE"
+done

@@ -1,0 +1,9 @@
+#!/bin/ksh
+PROG=$1
+LINE="$2"
+P1="$3"
+P2="$4"
+P3="$5"
+eval $(< /etc/brutiful.d/exec/$PROG)
+OUTLOG=/var/log/brutifuld
+pfctl -t brutes -Ta $BRUTE 2>&1 | fgrep -q 1/1 && echo $(date) $PROG: [$BRUTE] $(pfctl -K $BRUTE 2>&1) >> $OUTLOG

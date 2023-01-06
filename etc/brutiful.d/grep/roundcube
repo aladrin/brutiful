@@ -1,0 +1,1 @@
+echo $LINE | fgrep -q 'AUTHENTICATE PLAIN: Authentication failed. in /roundcubemail/program/lib/Roundcube/rcube_imap.php on line 211 (POST /?_task=login&_action=login)'

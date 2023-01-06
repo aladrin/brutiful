@@ -1,0 +1,1 @@
+echo $LINE | fgrep -q 'user=<>'
